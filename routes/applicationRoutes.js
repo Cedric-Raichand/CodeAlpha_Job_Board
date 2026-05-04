@@ -4,7 +4,7 @@ const Application = require("../models/Application");
 const Job = require("../models/Job");
 
 
-// 🔥 APPLY FOR JOB
+// APPLY FOR JOB
 router.post("/", async (req, res) => {
   try {
     const { jobId, name, email, resume } = req.body;
@@ -32,7 +32,7 @@ router.post("/", async (req, res) => {
 });
 
 
-// 🔥 GET ALL APPLICATIONS
+//  GET ALL APPLICATIONS
 router.get("/", async (req, res) => {
   try {
     const applications = await Application.find().populate("jobId");
@@ -43,7 +43,7 @@ router.get("/", async (req, res) => {
 });
 
 
-// 🔥 GET APPLICATIONS FOR A JOB
+// GET APPLICATIONS FOR A JOB
 router.get("/job/:jobId", async (req, res) => {
   try {
     const applications = await Application.find({
