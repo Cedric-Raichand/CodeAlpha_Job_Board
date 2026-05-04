@@ -3,7 +3,7 @@ const router = express.Router();
 const Job = require("../models/Job");
 
 
-// 🔥 CREATE JOB
+// CREATE JOB
 router.post("/", async (req, res) => {
   try {
     const job = new Job(req.body);
@@ -15,7 +15,7 @@ router.post("/", async (req, res) => {
 });
 
 
-// 🔥 GET ALL JOBS
+//  GET ALL JOBS
 router.get("/", async (req, res) => {
   try {
     const jobs = await Job.find();
@@ -26,7 +26,7 @@ router.get("/", async (req, res) => {
 });
 
 
-// 🔥 GET SINGLE JOB
+//  GET SINGLE JOB
 router.get("/:id", async (req, res) => {
   try {
     const job = await Job.findById(req.params.id);
