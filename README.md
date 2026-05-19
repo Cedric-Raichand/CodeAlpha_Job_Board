@@ -27,7 +27,7 @@ It allows users to post jobs, view job listings, and apply for jobs using REST A
 - dotenv
 
 ---
-
+```text
 ## 📁 Project Structure
 job-board/
 │── server.js
